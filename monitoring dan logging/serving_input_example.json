@@ -1,0 +1,23 @@
+[
+  {
+    "gender": 0,
+    "SeniorCitizen": 0,
+    "Partner": 1,
+    "Dependents": 0,
+    "tenure": -1.2802480369298874,
+    "PhoneService": 0,
+    "MultipleLines": 1,
+    "InternetService": 0,
+    "OnlineSecurity": 0,
+    "OnlineBackup": 2,
+    "DeviceProtection": 0,
+    "TechSupport": 0,
+    "StreamingTV": 0,
+    "StreamingMovies": 0,
+    "Contract": 0,
+    "PaperlessBilling": 1,
+    "PaymentMethod": 2,
+    "MonthlyCharges": -1.1616939352451685,
+    "TotalCharges": -0.9941940877241976
+  }
+]
