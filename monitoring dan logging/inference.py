@@ -14,15 +14,14 @@ model = joblib.load("best_random_forest.pkl")
 with open("serving_input_example.json", "r") as f:
     data_json = json.load(f)
 
-# Pastikan urutan fitur sesuai saat training
+# Daftar fitur input (harus 18 fitur sesuai saat training)
 feature_order = [
     "gender", "SeniorCitizen", "Partner", "Dependents", "tenure",
     "PhoneService", "MultipleLines", "InternetService", "OnlineSecurity",
     "OnlineBackup", "DeviceProtection", "TechSupport", "StreamingTV",
     "StreamingMovies", "Contract", "PaperlessBilling", "PaymentMethod",
-    "MonthlyCharges", "TotalCharges"
+    "MonthlyCharges"  # ⬅️ Tambahkan fitur ini (atau cek yang kurang)
 ]
-
 # Ubah JSON menjadi input untuk model
 X = [[row[feat] for feat in feature_order] for row in data_json]
 
@@ -33,7 +32,12 @@ print("✅ Exporter aktif di http://localhost:8002/metrics")
 # === Inference loop ===
 for i, row in enumerate(X):
     start = time.time()
-    prediction = model.predict([row])
+
+    # 🔍 Tambahkan ini untuk debugging
+    print(f"Jumlah fitur: {len(row)}")  # Harus 18
+    print(row)
+
+    prediction = model.predict([row])  # ← Error terjadi di sini
     duration = time.time() - start
 
     # Update metrik

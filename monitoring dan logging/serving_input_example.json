@@ -4,7 +4,7 @@
     "SeniorCitizen": 0,
     "Partner": 1,
     "Dependents": 0,
-    "tenure": -1.2802480369298874,
+    "tenure": -1.2802,
     "PhoneService": 0,
     "MultipleLines": 1,
     "InternetService": 0,
@@ -17,7 +17,6 @@
     "Contract": 0,
     "PaperlessBilling": 1,
     "PaymentMethod": 2,
-    "MonthlyCharges": -1.1616939352451685,
-    "TotalCharges": -0.9941940877241976
+    "MonthlyCharges": -1.1617
   }
 ]
